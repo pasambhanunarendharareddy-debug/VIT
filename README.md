@@ -1,12 +1,19 @@
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
+# 🛡️ CyberGuard AI
+![CyberGuard CI](https://github.com/pasambhanunarendharareddy-debug/VIT/actions/workflows/ci.yml/badge.svg)
 </div>
 
-# Run and deploy your AI Studio app
+**CyberGuard AI** is an AI-powered cybersecurity agent designed to scan codebases for vulnerabilities, security flaws, and bugs.
 
-This contains everything you need to run your app locally.
+## 🚀 Key Features
+- **AI Code Scanner:** Instant analysis for SQL Injection, XSS, and more.
+- **Security Dashboard:** Track your security posture with 1-100 scoring.
+- **Fix Suggestions:** AI-generated remediation patches.
+- **Expert Chat:** Socratic debugging for complex security logic.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1SQQuXZL2wgCmHW9zSsDj4ezNshb1-iuZ
+## 💻 Get Started Locally
 
 ## Run Locally
 
