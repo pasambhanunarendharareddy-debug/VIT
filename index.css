@@ -1,0 +1,121 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #080C14;
+  color: #E8F0FF;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(0,212,255,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(123,47,190,0.04) 0%, transparent 60%);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0D1526; }
+::-webkit-scrollbar-thumb { background: #1E2D4A; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00D4FF; }
+
+.cyber-card {
+  background: #0D1526;
+  border: 1px solid #1E2D4A;
+  border-radius: 12px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.cyber-card:hover {
+  border-color: rgba(0,212,255,0.3);
+  box-shadow: 0 0 20px rgba(0,212,255,0.08);
+}
+
+.btn-cyber {
+  background: linear-gradient(135deg, #00D4FF, #0090FF);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+  border-radius: 8px;
+}
+.btn-cyber:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,212,255,0.35); }
+.btn-cyber:active { transform: translateY(0); }
+.btn-cyber:disabled { opacity: 0.45; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
+
+.btn-outline {
+  background: transparent;
+  color: #00D4FF;
+  border: 1px solid #00D4FF;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+  border-radius: 8px;
+}
+.btn-outline:hover { background: rgba(0,212,255,0.1); }
+
+.code-input {
+  background: #040810;
+  border: 1px solid #1E2D4A;
+  border-radius: 8px;
+  color: #00FF88;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  padding: 16px;
+  resize: vertical;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s;
+  line-height: 1.6;
+}
+.code-input:focus { border-color: #00D4FF; box-shadow: 0 0 0 2px rgba(0,212,255,0.08); }
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #6B7FA3;
+  transition: all 0.2s;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+.nav-item:hover { background: rgba(0,212,255,0.07); color: #00D4FF; }
+.nav-item.active { background: rgba(0,212,255,0.12); color: #00D4FF; border-left: 3px solid #00D4FF; padding-left: 13px; }
+
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(0,212,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.chat-bubble-user {
+  background: linear-gradient(135deg, rgba(0,212,255,0.12), rgba(0,144,255,0.08));
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 16px 16px 4px 16px;
+}
+.chat-bubble-ai {
+  background: #0D1526;
+  border: 1px solid #1E2D4A;
+  border-radius: 16px 16px 16px 4px;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes pulseGlow { 0%,100% { box-shadow: 0 0 10px rgba(0,212,255,0.3); } 50% { box-shadow: 0 0 30px rgba(0,212,255,0.65), 0 0 60px rgba(0,212,255,0.25); } }
+@keyframes fadeSlideIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scanBar { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes typing { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes progressFill { from { width: 0%; } to { width: var(--w); } }
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulseGlow 2.5s ease-in-out infinite; }
+.animate-fade-in { animation: fadeSlideIn 0.5s ease-out forwards; }
+.animate-spin { animation: spin 1s linear infinite; }
+.animate-typing { animation: typing 1s step-end infinite; }
